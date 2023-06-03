@@ -19,17 +19,17 @@
         <div class="input">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email">
-            <span class="error2"></span>
+            <span id="error2"></span>
         </div>
         <div class="input">
             <label for="url">Website:</label>
             <input type="text" name="url" id="url">
-            <span class="error3"></span>
+            <span id="error3"></span>
         </div>
         <div class="input">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password">
-            <span class="error4"></span>
+            <span id="error4"></span>
         </div>
         <button type="submit" onsubmit="Validate()">Submit</button>
     </form>
@@ -41,9 +41,9 @@
         })
         const Validate = () => {
             const name = document.getElementById("name").value
-            const email = document.getElementById("email")
-            const url = document.getElementById("url")
-            const password = document.getElementById("password")
+            const email = document.getElementById("email").value
+            const url = document.getElementById("url").value
+            const password = document.getElementById("password").value
             console.log(name);
             if (name == "") {
                 document.getElementById("error1").innerHTML = "Please Provide the name"
@@ -60,9 +60,9 @@
                 document.getElementById("url").style.border = "2px solid red"
                 return false;
             }
-            if (pasword == "") {
+            if (password == "") {
                 document.getElementById("error4").innerHTML = "Please Provide the password"
-                document.getElementById("name").style.border = "2px solid red"
+                document.getElementById("password").style.border = "2px solid red"
                 return false;
             }
         }
