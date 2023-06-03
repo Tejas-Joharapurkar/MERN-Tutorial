@@ -7,32 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-Task3</title>
     <link rel="stylesheet" href="Js-Task3.css">
-    <script>
-        const form = document.getElementById("form")
-        form.addEventListener("submit", (e) => {
-            e.preventDefault()
-            console.log(e);
-        })
-    </script>
 </head>
 
 <body>
-    <form name="myForm" class="form" id="form">
-        <div class="input" id="name">
-            Name: <input type="text" name="name">
-            <span id="alert_name"></span>
+    <form id="form">
+        <div class="input">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <div id="error1"></div>
         </div>
         <div class="input">
-            Email: <input type="email" name="email">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <span class="error2"></span>
         </div>
         <div class="input">
-            Website: <input type="url" name="url">
+            <label for="url">Website:</label>
+            <input type="text" name="url" id="url">
+            <span class="error3"></span>
         </div>
         <div class="input">
-            Message: <input type="text" name="message">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+            <span class="error4"></span>
         </div>
-        <button type="submit">submit</button>
+        <button type="submit" onsubmit="Validate()">Submit</button>
     </form>
+    <script>
+        const form = document.getElementById("form")
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            Validate()
+        })
+        const Validate = () => {
+            const name = document.getElementById("name").value
+            const email = document.getElementById("email")
+            const url = document.getElementById("url")
+            const password = document.getElementById("password")
+            console.log(name);
+            if (name == "") {
+                document.getElementById("error1").innerHTML = "Please Provide the name"
+                document.getElementById("name").style.border = "2px solid red"
+                return false;
+            }
+            if (email == "") {
+                document.getElementById("error2").innerHTML = "Please Provide the email"
+                document.getElementById("email").style.border = "2px solid red"
+                return false;
+            }
+            if (url == "") {
+                document.getElementById("error3").innerHTML = "Please Provide the url"
+                document.getElementById("url").style.border = "2px solid red"
+                return false;
+            }
+            if (pasword == "") {
+                document.getElementById("error4").innerHTML = "Please Provide the password"
+                document.getElementById("name").style.border = "2px solid red"
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>
