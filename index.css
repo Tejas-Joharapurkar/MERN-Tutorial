@@ -1,0 +1,46 @@
+body {
+    background-color: #83c5be;
+}
+
+.container {
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 80vw;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.JsTask {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    padding-top: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.329);
+    background-color: #ffffff;
+    padding-bottom: 1rem;
+    height: 45vh;
+    margin-bottom: 2rem;
+}
+
+.t1 {
+    text-align: center;
+    width: 100%;
+    height: 1.3em;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    justify-content: flex-end;
+}
+
+.t1:hover {
+    background-color: #e5e5e5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.329);
+}
+
+a {
+    text-decoration: none;
+}

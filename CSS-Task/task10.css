@@ -1,0 +1,24 @@
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ip input[type="text"],
+input[type="password"] {
+    width: 500px;
+}
+
+.btn-success {
+    width: 500px;
+}
+
+.hlp {
+    background-color: #ccc;
+    width: 500px;
+    margin-top: 10px;
+}
+
+.hlp button {
+    margin-right: 290px;
+}
