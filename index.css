@@ -3,10 +3,10 @@ body {
 }
 
 .container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
-    grid-template-columns: auto auto auto;
-    width: 80vw;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
     margin: auto;
     margin-top: 4rem;
 }
@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 60%;
     margin: auto;
     padding-top: 1rem;
     border-radius: 0.25rem;
